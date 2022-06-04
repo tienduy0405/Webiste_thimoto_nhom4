@@ -2252,7 +2252,7 @@ function renderQuestion(id = 0, de = synthetic[0]) {
 
 function renderQuestionPage(exam_number = 0) {
     let target = document.getElementById("container");
-    document.getElementById("css").href = "/css/dethi.css";
+    document.getElementById("css").href = "css/dethi.css";
 
     let html = '<div class="left-container">' +
         '<div>' +
