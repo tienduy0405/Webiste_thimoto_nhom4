@@ -2252,7 +2252,7 @@ function renderQuestion(id = 0, de = synthetic[0]) {
 
 function renderQuestionPage(exam_number = 0) {
     let target = document.getElementById("container");
-    document.getElementById("css").href = "css/dethi.css";
+    document.getElementById("css").href = "./css/dethi.css";
 
     let html = '<div class="left-container">' +
         '<div>' +
@@ -2292,8 +2292,13 @@ function renderQuestionPage(exam_number = 0) {
     }
     document.getElementById("get-score-btn").addEventListener("click", () => {
         getScore();
-        alert("Điểm của bạn là : " + score);
+        if (score < 21) {
+            alert("Điểm của bạn là : " + score + " Bạn Thi Không Đậu");
+        }
 
+        if (score >= 21) {
+            alert("Điểm của bạn là : " + score + "Bạn Đã Vượt Qua Bài Lý Thuyết ");
+        }
     });
 }
 
